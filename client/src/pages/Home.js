@@ -11,32 +11,30 @@ import bgImage from '../assets/bg.png';
 
 
 function Home() {
-  const classNameString =`
-    text-white
-    h-screen
-    snap-y
-    overflow-y-scroll
-    overflow-x-hidden
-    snap-mandatory
-    z-0 scrollbar
-    scrollbar-track-gray-400/20
-    scrollbar-thumb-[#aa4a44]/80
-    scroll-smooth
-  `;
+  // const classNameString =`
+  //   text-white
+  //   h-screen
+  //   snap-y
+  //   overflow-y-scroll
+  //   overflow-x-hidden
+  //   snap-mandatory
+  //   z-0 scrollbar
+  //   scrollbar-track-gray-400/20
+  //   scrollbar-thumb-[#aa4a44]/80
+  //   scroll-smooth
+  // `;
 
-  const appStyles = {
-    background: `url(${bgImage})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
-  };
+  // const appStyles = {
+  //   background: `url(${bgImage})`,
+  //   backgroundSize: 'cover',
+  //   backgroundRepeat: 'no-repeat',
+  //   backgroundPosition: 'center',
+  //   backgroundAttachment: 'fixed',
+  // };
 
 
   return (
     <div
-      className={classNameString}
-      style={appStyles}
     >
         
 
@@ -64,12 +62,6 @@ function Home() {
         <section id="contact" className="snap-start">
           <ContactMe/>
         </section>
-
-        {/* {Footer} */}
-        <section id="contact" className="">
-          <Footer/>
-        </section>
-
         
           <div className="sticky bottom-5 w-full">
             <div className="flex items-center justify-end mr-10">

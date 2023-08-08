@@ -1,34 +1,11 @@
 import React from 'react';
 import ProjectImg from '../assets/projects.png';
 import Project from './Project';
-
+import CharacterizationsImg from '../assets/characterizations.png';
 
 
 function Projects() {
-    const data = [{
-        key: 1,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'Krzychu',
-    },
-    {
-        key: 2,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'i Lejczak',
-    },
-    {
-        key: 3,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'coś tam',
-    },
-    {
-        key: 4,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'naura',
-    }];
+    
     return (
         <div className='
             h-screen
@@ -44,29 +21,135 @@ function Projects() {
             items-center
             z-0'
         >
+            <h1 className='sectionTitle'>
+                &nbsp;Projects
+            </h1>
+
             <div
                 className='
                 relative
                 w-full
                 flex
-                overflow-x-scroll
-                overflow-y-hidden
-                snap-x
-                snap-mandatory
-                z-20 scrollbar
-                scrollbar-track-gray-400/20
-                scrollbar-thumb-[#aa4a44]/80'
-            >
-                {data.map((x, i) => (
-                <Project
-                    value={i+1}
-                    key={x.key}
-                    img={x.img}
-                    description={x.description}
-                    title={x.title}
-                />))}
-            </div>
-            <div className='w-full absolute top-[30%] left-0 h-[500px] bg-[#AA4A44]/20 -skew-y-12'>
+                z-20
+                flex-col
+                lg:flex-row
+                justify-center
+                align-center
+            '>
+                <div className='
+                    bg-black
+                    flex
+                    flex-row
+                    justify-center
+                    items-center
+                    bg-opacity-50
+                    p-5
+                    m-10
+                    rounded-xl
+                    md:flex-col
+                '>
+                    
+                    <img
+                        className='
+                            w-40
+                            h-40
+                            md:w-80
+                            md:h-80
+                            object-cover
+                        '
+                        src={CharacterizationsImg}
+                        alt=""
+                    />
+                    <h1 className='
+                        uppercase
+                        tracking-[8px]
+                        text-gray-300
+                        text-md
+                        transform
+                        -translate-x-[-10px]
+                        md:text-xl
+                        
+                    '>
+                        Characterizations
+                    </h1>
+                </div>
+                
+                <div className='
+                    bg-black
+                    flex
+                    flex-row
+                    justify-center
+                    items-center
+                    bg-opacity-50
+                    p-5
+                    m-10
+                    rounded-xl
+                    md:flex-col
+                '>
+                    
+                    <img
+                        className='
+                            w-40
+                            h-40
+                            md:w-80
+                            md:h-80
+                            object-cover
+                        '
+                        src={CharacterizationsImg}
+                        alt=""
+                    />
+                    <h1 className='
+                        uppercase
+                        tracking-[8px]
+                        text-gray-300
+                        text-md
+                        transform
+                        -translate-x-[-10px]
+                        md:text-xl
+                        
+                    '>
+                        Graphics
+                    </h1>
+                </div>
+                
+                <div className='
+                    bg-black
+                    flex
+                    flex-row
+                    justify-center
+                    items-center
+                    bg-opacity-50
+                    p-5
+                    m-10
+                    rounded-xl
+                    md:flex-col
+                '>
+                    
+                    <img
+                        className='
+                            w-40
+                            h-40
+                            md:w-80
+                            md:h-80
+                            object-cover
+                        '
+                        src={CharacterizationsImg}
+                        alt=""
+                    />
+                    <h1 className='
+                        uppercase
+                        tracking-[8px]
+                        text-gray-300
+                        text-md
+                        transform
+                        -translate-x-[-10px]
+                        md:text-xl
+                        
+                    '>
+                        Architecture
+                    </h1>
+                </div>
+
             </div>
         </div>
     );
