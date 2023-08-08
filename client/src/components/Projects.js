@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectImg from '../assets/projects.png';
 import Project from './Project';
 import CharacterizationsImg from '../assets/characterizations.png';
-
+import Category from './Category';
 
 function Projects() {
     
@@ -34,121 +34,21 @@ function Projects() {
                 flex-col
                 lg:flex-row
                 justify-center
-                align-center
+                items-center
+                basis-full
             '>
-                <div className='
-                    bg-black
-                    flex
-                    flex-row
-                    justify-center
-                    items-center
-                    bg-opacity-50
-                    p-5
-                    m-10
-                    rounded-xl
-                    md:flex-col
-                '>
-                    
-                    <img
-                        className='
-                            w-40
-                            h-40
-                            md:w-80
-                            md:h-80
-                            object-cover
-                        '
-                        src={CharacterizationsImg}
-                        alt=""
-                    />
-                    <h1 className='
-                        uppercase
-                        tracking-[8px]
-                        text-gray-300
-                        text-md
-                        transform
-                        -translate-x-[-10px]
-                        md:text-xl
-                        
-                    '>
-                        Characterizations
-                    </h1>
-                </div>
-                
-                <div className='
-                    bg-black
-                    flex
-                    flex-row
-                    justify-center
-                    items-center
-                    bg-opacity-50
-                    p-5
-                    m-10
-                    rounded-xl
-                    md:flex-col
-                '>
-                    
-                    <img
-                        className='
-                            w-40
-                            h-40
-                            md:w-80
-                            md:h-80
-                            object-cover
-                        '
-                        src={CharacterizationsImg}
-                        alt=""
-                    />
-                    <h1 className='
-                        uppercase
-                        tracking-[8px]
-                        text-gray-300
-                        text-md
-                        transform
-                        -translate-x-[-10px]
-                        md:text-xl
-                        
-                    '>
-                        Graphics
-                    </h1>
-                </div>
-                
-                <div className='
-                    bg-black
-                    flex
-                    flex-row
-                    justify-center
-                    items-center
-                    bg-opacity-50
-                    p-5
-                    m-10
-                    rounded-xl
-                    md:flex-col
-                '>
-                    
-                    <img
-                        className='
-                            w-40
-                            h-40
-                            md:w-80
-                            md:h-80
-                            object-cover
-                        '
-                        src={CharacterizationsImg}
-                        alt=""
-                    />
-                    <h1 className='
-                        uppercase
-                        tracking-[8px]
-                        text-gray-300
-                        text-md
-                        transform
-                        -translate-x-[-10px]
-                        md:text-xl
-                        
-                    '>
-                        Architecture
-                    </h1>
-                </div>
+                <Category
+                    categoryName='characterizations'
+                    categoryImg={CharacterizationsImg}
+                />
+                <Category
+                    categoryName='graphics'
+                    categoryImg={CharacterizationsImg}
+                />
+                <Category
+                    categoryName='architecture'
+                    categoryImg={CharacterizationsImg}
+                />
 
             </div>
         </div>

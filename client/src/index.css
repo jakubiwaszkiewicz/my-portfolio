@@ -15,7 +15,7 @@
     }
     .sectionTitle {
         @apply absolute top-16 uppercase tracking-[16px] xl:tracking-[20px]
-        text-gray-300 text-xl transform md:text-2xl
-        bg-opacity-50 bg-black px-4 py-2 rounded-sm
+        text-white text-xl transform md:text-2xl
+        bg-opacity-50 px-4 py-2 rounded-sm font-bold
     }
 }

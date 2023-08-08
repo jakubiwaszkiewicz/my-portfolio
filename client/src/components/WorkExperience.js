@@ -46,7 +46,7 @@ function WorkExperience() {
                 z-0'
             >
                 <h1 className='sectionTitle'>
-                    Experience
+                    &nbsp;Experience
                 </h1>
                 <div
                     className='

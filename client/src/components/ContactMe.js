@@ -1,11 +1,74 @@
-import React from 'react';
+import React from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form';
+import EmailIcon from '@mui/icons-material/Email';
+import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import PhoneIcon from '@mui/icons-material/Phone';
 
-function ContactMe() {
-    return (
-        <div>
-            <p>ContactMe</p>
-        </div>
+
+function ContactMe({pageInfo}) {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (formData) => {
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`
     );
+    window.location.href = `mailto:calus.magda2@gmail.com?subject=${subject}&body=${body}`;
+  };
+
+  return (
+    <div className='relative h-screen flex flex-col text-center lg:px-10 md:text-left max-w-4xl justify-center mx-auto items-center'>
+        <h1 className='sectionTitle'>
+            &nbsp;Contact
+        </h1>
+
+        <div className='flex flex-col space-y-10 bg-black bg-opacity-50 p-8' style={{ width: '100%' }}>
+          <h4 className='text-2xl lg:text-4xl font-semibold text-center'>
+            If I&apos;ve got just what you need, {" "}
+            <br/>
+            <span className='underline decoration-[#AA4A44]/70 underline-offset-8'>Let&apos;s talk!</span> 
+          </h4>
+
+          <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
+            <PhoneIcon
+              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+            />
+            <p className="text-xl md:text-2xl">1233453456</p>
+          </div>
+
+          <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
+            <EmailIcon
+              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+            />
+            <p className="text-xl md:text-2xl">magda.calus2@gmail.com</p>
+          </div>
+
+          <div className='flex items-center lg:space-x-5 space-x-3 text-md justify-center'>
+            <FmdGoodIcon
+              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+            />
+            <p className="text-xl md:text-2xl">tychy</p>
+          </div>
+
+          <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2'>
+            <div className='flex space-x-2 justify-center'>
+              <input {...register('name')} type="text" placeholder='Name' className='contactInput'/>
+              <input {...register('email')} type="text" placeholder='Email' className='contactInput'/>
+            </div>
+
+            <input {...register('subject')} type="text" placeholder='Subject' className='contactInput'/>
+
+            <textarea {...register('message')} placeholder='Message' className='contactInput'/>
+            <button
+              type="submit"
+              className='heroButton text-xl rounded-lg border-gray-500'
+            >
+              Submit
+            </button>
+          </form>
+
+        </div>
+    </div>
+  )
 }
 
-export default ContactMe;
+export default ContactMe
