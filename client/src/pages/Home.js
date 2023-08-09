@@ -67,7 +67,7 @@ function Home() {
             <div className="flex items-center justify-end mr-10">
               <a href="#hero" className='cursor-pointer'>
                 <AiOutlineArrowUp
-                  className="w-10 h-10 filter hover:text-[#aa4a44] transtion-hover duration-300"
+                  className="w-10 h-10 filter hover:text-[#D71E75] transtion-hover duration-300"
                 />
               </a>
             </div>

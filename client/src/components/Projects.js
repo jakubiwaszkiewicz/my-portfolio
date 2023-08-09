@@ -1,11 +1,15 @@
 import React from 'react';
 import ProjectImg from '../assets/projects.png';
-import Project from './Project';
+import Project from './ExpCard';
 import CharacterizationsImg from '../assets/characterizations.png';
 import Category from './Category';
+import { Link } from 'react-router-dom';
+import GraphicsImg from '../assets/madzia-seba.jpg';
 
 function Projects() {
     
+    
+
     return (
         <div className='
             h-screen
@@ -36,19 +40,25 @@ function Projects() {
                 justify-center
                 items-center
                 basis-full
-            '>
-                <Category
-                    categoryName='characterizations'
-                    categoryImg={CharacterizationsImg}
-                />
-                <Category
-                    categoryName='graphics'
-                    categoryImg={CharacterizationsImg}
-                />
-                <Category
-                    categoryName='architecture'
-                    categoryImg={CharacterizationsImg}
-                />
+            '> 
+                <Link to='/projects/1'>
+                    <Category
+                        categoryName='architecture'
+                        categoryImg={CharacterizationsImg}
+                    />
+                </Link>
+                <Link to='/projects/2'>
+                    <Category
+                        categoryName='graphics'
+                        categoryImg={GraphicsImg}
+                    />
+                </Link>
+                <Link to='/projects/3'>
+                        <Category
+                            categoryName='characterizations'
+                            categoryImg={CharacterizationsImg}
+                        />
+                </Link>
 
             </div>
         </div>

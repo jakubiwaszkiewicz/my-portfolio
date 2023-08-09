@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project';
+import Project from './ExpCard';
 import ProjectImg from '../assets/projects.png';
 
 function WorkExperience() {

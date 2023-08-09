@@ -25,28 +25,28 @@ function ContactMe({pageInfo}) {
           <h4 className='text-2xl lg:text-4xl font-semibold text-center'>
             If I&apos;ve got just what you need, {" "}
             <br/>
-            <span className='underline decoration-[#AA4A44]/70 underline-offset-8'>Let&apos;s talk!</span> 
+            <span className='underline decoration-[#AA1E60]/70 underline-offset-8'>Let&apos;s talk!</span> 
           </h4>
 
           <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
             <PhoneIcon
-              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+              className='animate-pulse h-7 w-7 text-[#AA1E60]'
             />
             <p className="text-xl md:text-2xl">1233453456</p>
           </div>
 
           <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
             <EmailIcon
-              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+              className='animate-pulse h-7 w-7 text-[#AA1E60]'
             />
-            <p className="text-xl md:text-2xl">magda.calus2@gmail.com</p>
+            <p className="text-xl md:text-2xl">calus.magda2@gmail.com</p>
           </div>
 
           <div className='flex items-center lg:space-x-5 space-x-3 text-md justify-center'>
             <FmdGoodIcon
-              className='animate-pulse h-7 w-7 text-[#AA4A44]'
+              className='animate-pulse h-7 w-7 text-[#AA1E60]'
             />
-            <p className="text-xl md:text-2xl">tychy</p>
+            <p className="text-xl md:text-2xl">pociąg</p>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2'>

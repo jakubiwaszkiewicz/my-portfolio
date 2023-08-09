@@ -26,7 +26,7 @@ function Project({ value, img, description, title }) {
             />
             <div className='space-y-4 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
                 <h4 className='text-center font-semibold lg:text-4xl text-xl'>
-                    <span className="underline decoration-[#AA4A44] text-center underline-offset-8">
+                    <span className="underline decoration-[#D71E75] text-center underline-offset-8">
                         Project 1 of {value}: 
                     </span>
                 {" "} {title}

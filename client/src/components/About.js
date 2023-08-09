@@ -58,7 +58,7 @@ function About() {
             className='space-y-10 px-0 md:px-10'
         >
             <h4 className="text-4xl font-semibold">
-                Hello <span className='underline decoration-[#AA4A44]/80 tracking-widest underline-offset-8'>there!</span> 
+                Hello <span className='underline decoration-[#D71E75]/80 tracking-widest underline-offset-8'>there!</span> 
             </h4>
             <p className='md:text-base text-sm'>
                 I'm a 3rd year Computer Science student at the University of Waterloo. I'm passionate about building things that make a difference in people's lives. I'm currently looking for a Winter 2022 internship opportunity.

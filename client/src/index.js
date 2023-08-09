@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
 import bgImage from './assets/bg.png';
+import Project from './pages/Project';
 
 const classNameString =`
     text-white
@@ -58,8 +59,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/project/:id",
-        element: <Portfolio/>,
+        element: <Project/>,
       },
+      
     ]
   },
 ]);
