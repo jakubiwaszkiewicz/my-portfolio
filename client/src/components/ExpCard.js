@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
-function Project({ value, img, description, title }) {
+function ExpCard({ img, whatHaveIDoneHere, title, date }) {
     return (
         <div
             className='w-screen flex-shrink-1 snap-center flex flex-col space-y-5
-            items-center justify-center p-20 md:p-33 h-screen'
+            items-center justify-center p-5 md:p-5 md:pt-1 h-fit bg-black bg-opacity-50 md:m-13 m-10 max-h-[700px] rounded-lg'
         >
             <motion.img
                 initial={{
@@ -22,21 +22,23 @@ function Project({ value, img, description, title }) {
                 viewport={{ once:true }}
                 src={img}
                 alt=""
-                className='rounded-2xl shadow-xl max-w-[500px]'
+                className='rounded-2xl shadow-xl sm:w-[500px] sm:h-[350px] w-[250px] h-[200px] object-contain'
             />
-            <div className='space-y-4 lg:space-y-10 px-0 md:px-10 max-w-6xl'>
-                <h4 className='text-center font-semibold lg:text-4xl text-xl'>
-                    <span className="underline decoration-[#D71E75] text-center underline-offset-8">
-                        Project 1 of {value}: 
-                    </span>
-                {" "} {title}
+            <div className='px-0 max-w-6xl flex flex-col'>
+                <h4 className='decoration-1 font-light lg:text-2xl text-xl underline underline-offset-2 mb-3 sm:max-w-[500px] sm:max-h-[350px] max-w-[250px] max-h-[200px] tracking-[6px]'>
+                    {title}
                 </h4>
-                <p className='text-sm text-center md:text-left'>
-                    {description}
-                </p>
+                <span className='text-md text-left pb-2 w-[250px] sm:w-[500px] text-slate-400'>
+                    Date: {date}
+                </span>
+                {whatHaveIDoneHere.map((x, i) => {
+                    return(
+                        <span key={i} className='text-slate-200 text-md sm:w-[500px] w-[250px] text-justify'>•{" "}{x}</span>
+                    )
+                })}
             </div>
         </div>
     );
 }
 
-export default Project;
+export default ExpCard;

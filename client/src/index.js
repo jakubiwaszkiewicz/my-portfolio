@@ -13,6 +13,9 @@ import Portfolio from './pages/Portfolio';
 import bgImage from './assets/bg.png';
 import Project from './pages/Project';
 
+// data for tests 
+import {dataAbout, dataProjects} from './data.js';
+
 const classNameString =`
     text-white
     h-screen
@@ -22,7 +25,7 @@ const classNameString =`
     snap-mandatory
     z-0 scrollbar
     scrollbar-track-gray-400/20
-    scrollbar-thumb-[#aa4a44]/80
+    scrollbar-thumb-[#D71E75]/80
     scroll-smooth
   `;
 
@@ -45,21 +48,30 @@ const Layout = () => {
 }
 
 const router = createBrowserRouter([
+
+  
+
   {
     path: "/",
     element: <Layout/>,
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home
+            data = {dataAbout}
+          />,
       },
       {
         path: "/projects/:id",
-        element: <Portfolio/>,
+        element: <Portfolio
+            data = {dataProjects}
+        />,
       },
       {
         path: "/project/:id",
-        element: <Project/>,
+        element: <Project
+            data = {dataProjects}
+        />,
       },
       
     ]

@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import photo from '../assets/pics_for_kuba.png';
 
-function About() {
+function About({ desc, photo }) {
     return (
         <motion.div
         initial={{
@@ -61,7 +60,7 @@ function About() {
                 Hello <span className='underline decoration-[#D71E75]/80 tracking-widest underline-offset-8'>there!</span> 
             </h4>
             <p className='md:text-base text-sm'>
-                I'm a 3rd year Computer Science student at the University of Waterloo. I'm passionate about building things that make a difference in people's lives. I'm currently looking for a Winter 2022 internship opportunity.
+                {desc}
             </p>
         </motion.div>
     </motion.div>

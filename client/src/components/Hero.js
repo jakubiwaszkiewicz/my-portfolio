@@ -2,17 +2,24 @@ import React from 'react';
 import Photo from '../assets/pics_for_kuba.png';
 import BackgroundCircles from './BackgroundCircles';
 
-function Hero() {
-
+function Hero({ photo, name }) {
+  console.log(name)
     return (
       <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
           <img
-          src={Photo}
+          src={photo}
           className='relative rounded-full h-40 w-40 mx-auto object-cover'
           alt=''
           />
         <div className='z-20'>
+        <h2 className='
+            text-4xl
+            font-light
+            pb-10
+          '>
+            {name}
+          </h2>
           <h2 className='
             text-sm
             uppercase

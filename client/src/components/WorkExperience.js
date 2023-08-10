@@ -1,34 +1,7 @@
 import React from 'react';
-import Project from './ExpCard';
-import ProjectImg from '../assets/projects.png';
+import ExpCard from './ExpCard';
 
-function WorkExperience() {
-
-    const data = [{
-        key: 1,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'Krzychu',
-    },
-    {
-        key: 2,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'i Lejczak',
-    },
-    {
-        key: 3,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'coś tam',
-    },
-    {
-        key: 4,
-        img: `${ProjectImg}`,
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-        title: 'naura',
-    }];
-
+function WorkExperience({ experience }) {
     return (
         <div>
             <div className='
@@ -59,15 +32,15 @@ function WorkExperience() {
                     snap-mandatory
                     z-20 scrollbar
                     scrollbar-track-gray-400/20
-                    scrollbar-thumb-[#aa4a44]/80'
+                    scrollbar-thumb-[#ffffff]'
                 >
-                    {data.map((x, i) => (
-                        <Project
-                            value={i+1}
-                            key={x.key}
+                    {experience.map((x, i) => (
+                        <ExpCard
+                            key={x.id}
                             img={x.img}
-                            description={x.description}
                             title={x.title}
+                            date={x.date}
+                            whatHaveIDoneHere={x.whatHaveIDoneHere}
                         />))}
                 </div>
             </div>

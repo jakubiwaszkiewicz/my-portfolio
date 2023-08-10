@@ -19,7 +19,7 @@ export default function Category({categoryName, categoryImg}) {
             <img
                 className='
                     w-40
-                    h-35
+                    h-40
                     lg:w-80
                     lg:h-80
                     object-cover'

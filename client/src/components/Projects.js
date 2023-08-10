@@ -1,6 +1,4 @@
 import React from 'react';
-import ProjectImg from '../assets/projects.png';
-import Project from './ExpCard';
 import CharacterizationsImg from '../assets/characterizations.png';
 import Category from './Category';
 import { Link } from 'react-router-dom';
@@ -41,19 +39,19 @@ function Projects() {
                 items-center
                 basis-full
             '> 
-                <Link to='/projects/1'>
+                <Link to='/projects/archtectural'>
                     <Category
                         categoryName='architecture'
                         categoryImg={CharacterizationsImg}
                     />
                 </Link>
-                <Link to='/projects/2'>
+                <Link to='/projects/graphic'>
                     <Category
                         categoryName='graphics'
                         categoryImg={GraphicsImg}
                     />
                 </Link>
-                <Link to='/projects/3'>
+                <Link to='/projects/characterization'>
                         <Category
                             categoryName='characterizations'
                             categoryImg={CharacterizationsImg}
