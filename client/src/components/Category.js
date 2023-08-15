@@ -9,12 +9,18 @@ export default function Category({categoryName, categoryImg}) {
             justify-center
             items-center
             bg-opacity-50
-            lg:p-5
-            p-2
-            m-3
-            lg:m-10
             rounded-xl
             min-w-[300px]
+            p-2
+            m-3
+            hover:m-1
+            hover:p-4
+            lg:p-5
+            lg:m-10
+            lg:hover:p-10
+            lg:hover:m-5
+            hover:bg-opacity-80
+            transition-all
         '>
             <img
                 className='
@@ -33,7 +39,7 @@ export default function Category({categoryName, categoryImg}) {
                 text-white
                 text-md
                 transform
-                lg:text-lg
+                lg:text-md
                 mt-1
                 lg:mt-3
             '>
