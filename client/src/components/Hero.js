@@ -1,5 +1,4 @@
 import React from 'react';
-import Photo from '../assets/pics_for_kuba.png';
 import BackgroundCircles from './BackgroundCircles';
 import { useRef } from 'react';
 

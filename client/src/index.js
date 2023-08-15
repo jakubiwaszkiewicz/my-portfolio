@@ -45,6 +45,7 @@ const classNameString =`
 const Layout = () => {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  
   return (
     <div className={classNameString} style={appStyles}>
       <Header/>
@@ -55,19 +56,13 @@ const Layout = () => {
 }
 
 const router = createBrowserRouter([
-
-  
-
   {
     path: "/",
     element: <Layout/>,
     children: [
       {
         path: "/",
-        element: <Home
-            data = {dataAbout}
-            dataExperience = {dataExperience}
-          />,
+        element: <Home/>,
       },
       {
         path: "/projects/:id",

@@ -22,7 +22,7 @@ function ExpCard({ img, whatHaveIDoneHere, title, date }) {
                 viewport={{ once:true }}
                 src={img}
                 alt=""
-                className='rounded-2xl shadow-xl sm:w-[500px] sm:h-[350px] w-[250px] h-[200px] object-contain'
+                className='rounded-2xl shadow-xl sm:w-[500px] sm:h-[350px] w-[250px] h-[200px] object-contain p-5'
             />
             <div className='px-0 max-w-6xl flex flex-col'>
                 <h4 className='decoration-1 font-light lg:text-2xl text-xl underline underline-offset-2 mb-3 sm:max-w-[500px] sm:max-h-[350px] max-w-[250px] max-h-[200px] tracking-[6px]'>

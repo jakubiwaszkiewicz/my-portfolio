@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About'; 
 import WorkExperience from '../components/WorkExperience';
@@ -23,35 +23,41 @@ const ContactMe =  lazy(() => import('../components/ContactMe'));
 const API_ABOUT_URL = 'http://localhost:3001/api/about-data';
 const API_EXP_URL = 'http://localhost:3001/api/experiences-data';
 
-function Home({ data, dataExperience }) {
+function Home() {
 
+  let [ loadingAPI , setLoadingAPI ] = useState([true, true])
   let [ aboutData, setAboutData ] = useState('')
   let [ expData, setExpData ] = useState([])
 
-  let [loadingAPI , setLoadingAPI] = useState([true, true, true])
 
   useEffect(() => {
-    const dataFetchAbout = async () => {
-      const data = await (
-        await fetch (API_ABOUT_URL)
-      ).json();
-
-      // set state when the data received
-      setAboutData(data.data.attributes);
-    };
-    dataFetchAbout().then(setLoadingAPI([false, loadingAPI[1]]));
-    
-  }, []);
+    fetch(API_ABOUT_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setAboutData(data.data.attributes)
+        setLoadingAPI((prevLoading) => [false, prevLoading[1]])
+      })}, []);
 
   useEffect(() => {
     fetch(API_EXP_URL)
       .then((res) => res.json())
-      .then((data) => setExpData(data.data))
-      .then(setLoadingAPI([loadingAPI[0], false]))
+      .then((data) => {
+        setExpData(data.data)
+        setLoadingAPI((prevLoading) => [prevLoading[1], false])
+      })
+  
   }, []);
+
+  useEffect(() => {
+    console.log(loadingAPI)
+  }, [loadingAPI])
 
   return (
     <div>
+      {
+        loadingAPI.some((element) => element === true ) && <Loading />
+      }
+
         <section id="hero" className="snap-start">
           <Hero
             photo={aboutData.photo1}

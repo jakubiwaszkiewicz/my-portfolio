@@ -11,7 +11,7 @@ const loadingCircle = {
   display: "block",
   width: "1rem",
   height: "1rem",
-  backgroundColor: "#3A36DB",
+  backgroundColor: "#D71E75",
   borderRadius: "0.5rem",
 };
 
@@ -43,35 +43,35 @@ const loadingCircleTransition = {
 }
 
 const Loader = () => {
-  return (
-    <div>
-      <div className="fixed  w-full min-h-screen z-50 bg-black opacity-30" />
-      <div className="flex fixed w-full justify-center items-center h-screen">
-        <motion.div
-          style={loadingContainer}
-          variants={loadingContainerVariants}
-          initial="start"
-          animate="end"
-        >
-          <motion.span
-            style={loadingCircle}
-            variants={loadingCircleVariants}
-            transition={loadingCircleTransition}
-          ></motion.span>
-          <motion.span
-            style={loadingCircle}
-            variants={loadingCircleVariants}
-            transition={loadingCircleTransition}
-          ></motion.span>
-          <motion.span
-            style={loadingCircle}
-            variants={loadingCircleVariants}
-            transition={loadingCircleTransition}
-          ></motion.span>
-        </motion.div>
-      </div>
-    </div>
-  );
+    return (
+        <div>
+            <div className="fixed h-screen w-screen min-h-screen z-50" />
+                <div className="flex fixed w-full justify-center items-center h-screen ">
+                    <motion.div
+                        style={loadingContainer}
+                        variants={loadingContainerVariants}
+                        initial="start"
+                        animate="end"
+                    >
+                    <motion.span
+                        style={loadingCircle}
+                        variants={loadingCircleVariants}
+                        transition={loadingCircleTransition}
+                    ></motion.span>
+                    <motion.span
+                        style={loadingCircle}
+                        variants={loadingCircleVariants}
+                        transition={loadingCircleTransition}
+                    ></motion.span>
+                    <motion.span
+                        style={loadingCircle}
+                        variants={loadingCircleVariants}
+                        transition={loadingCircleTransition}
+                    ></motion.span>
+                </motion.div>
+            </div>
+        </div>
+    );
 };
 
 export default Loader;
