@@ -1,7 +1,10 @@
 import React from 'react';
 import ExpCard from './ExpCard';
 
-function WorkExperience({ experience }) {
+function WorkExperience({experiences}) {
+
+    console.log(experiences)
+
     return (
         <div>
             <div className='
@@ -34,13 +37,13 @@ function WorkExperience({ experience }) {
                     scrollbar-track-gray-400/20
                     scrollbar-thumb-[#ffffff]'
                 >
-                    {experience.map((x, i) => (
+                    {experiences.map((x) => (
                         <ExpCard
                             key={x.id}
-                            img={x.img}
-                            title={x.title}
-                            date={x.date}
-                            whatHaveIDoneHere={x.whatHaveIDoneHere}
+                            img={x.attributes.img}
+                            title={x.attributes.title}
+                            date={x.attributes.date}
+                            whatHaveIDoneHere={x.attributes.whatHaveIDoneHere}
                         />))}
                 </div>
             </div>

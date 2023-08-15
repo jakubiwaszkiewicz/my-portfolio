@@ -21,11 +21,11 @@ function ContactMe({pageInfo}) {
             &nbsp;Contact
         </h1>
 
-        <div className='flex flex-col space-y-10 bg-black bg-opacity-50 p-8' style={{ width: '100%' }}>
+        <div className='flex flex-col space-y-10 rounded-lg bg-black bg-opacity-50 p-3 px- lg:p-6 mt-[80px] lg:mt-[110px] lg:w-full w-[330px]'>
           <h4 className='text-2xl lg:text-4xl font-semibold text-center'>
             If I&apos;ve got just what you need, {" "}
             <br/>
-            <span className='underline decoration-[#AA1E60]/70 underline-offset-8'>Let&apos;s talk!</span> 
+            <span className='underline decoration-[#ffffff] underline-offset-8'>Let&apos;s talk!</span> 
           </h4>
 
           <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
@@ -54,9 +54,7 @@ function ContactMe({pageInfo}) {
               <input {...register('name')} type="text" placeholder='Name' className='contactInput'/>
               <input {...register('email')} type="text" placeholder='Email' className='contactInput'/>
             </div>
-
             <input {...register('subject')} type="text" placeholder='Subject' className='contactInput'/>
-
             <textarea {...register('message')} placeholder='Message' className='contactInput'/>
             <button
               type="submit"

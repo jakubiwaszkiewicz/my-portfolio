@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts_data",
+  "info": {
+    "singularName": "about-data",
+    "pluralName": "abouts-data",
+    "displayName": "AboutData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "photo1": {
+      "type": "string"
+    },
+    "photo2": {
+      "type": "string"
+    },
+    "localization": {
+      "type": "string"
+    }
+  }
+}

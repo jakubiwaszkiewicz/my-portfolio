@@ -38,6 +38,7 @@ function Projects() {
                 justify-center
                 items-center
                 basis-full
+                mt-20
             '> 
                 <Link to='/projects/archtectural'>
                     <Category

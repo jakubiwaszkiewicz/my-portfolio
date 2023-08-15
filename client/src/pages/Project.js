@@ -21,11 +21,11 @@ export default function Project() {
           <div className="flex-1">
             {images.map((img, index) => {
               return (
-                <img src={img} alt="" onClick={e=>setMainImg(index)} className='w-[150px] h-[150px] object-cover mb-[10px]'/>
+                <img src={img} alt="" onClick={e=>setMainImg(index)} className='w-[150px] h-[150px] object-cover mb-[10px]' key={index}/>
               )
             })}
           </div>
-          <div className="flex-[3_3_0%] flex itemc-center justify-center">
+          <div className="flex-[3_3_0%] flex item-center justify-center">
             <img src={images[mainImg]} alt="" className='max-h-[800px] object-conatin'/>
           </div>
           <div className="flex-1 flex flex-col gap-2 bg-black bg-opacity-50 h-fit p-5">

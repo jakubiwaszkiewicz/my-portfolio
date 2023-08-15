@@ -53,7 +53,7 @@ const dataProjects = [{
     categoryId: "characterization",
     img: `${ProjectImg}`,
     description: 'characterization, Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, vo',
-    title: 'naura',
+    title: 'naura i Lejczak  i Lejczak  i Lejczak  i Lejczak  i Lejczak  i Lejczak ',
   }];
 
 const dataAbout = {
@@ -64,62 +64,65 @@ const dataAbout = {
     photo1: 'https://i.imgur.com/JQZIa5X.png',
     photo2: 'https://i.imgur.com/qEuxALD.png',
     localization: 'Gdańsk, Poland',
-    experience:
-    [
-        {
-            id:1,
-            img: 'https://i.imgur.com/5sZzQYG.png',
-            title: 'krzychu jest super',
-            date: '2021 - Present',
-            whatHaveIDoneHere: [
-                "krzychu jest super lejczak też jest jak coś lejczak też jest jak coś",
-                "krzychu jest gupi",
-                "krzychu jest ***** ***",
-                "lejczak też jest jak coś",
-        ]},
-        {
-            id:2,
-            img: 'https://i.imgur.com/5sZzQYG.png',
-            title: 'lejczak jest super',
-            date: '2024 - 1232',
-            whatHaveIDoneHere: [
-                "krzychu jest super",
-                "krzychu jest gupi",
-                "krzychu jest ***** ***",
-                "lejczak też jest jak coś",
-        ]},
-        {
-            id:3,
-            img: 'https://i.imgur.com/5sZzQYG.png',
-            title: 'grunwald24',
-            date: '1410 - 1411',
-            whatHaveIDoneHere: [
-                "malowanie krzyzakow",
-                "nananananana annanaa",
-                "krzychu jest ***** ***",
-                "jaskier wali gruche pod poduche",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-        ]},
-        {
-            id:4,
-            img: 'https://i.imgur.com/5sZzQYG.png',
-            title: 'mlodzierz wszechpolska',
-            date: '2000 - Present',
-            whatHaveIDoneHere: [
-                "masakrowanie lewakow",
-                "chodzenie na plenery pisu",
-                "kościół jest super",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-                "lejczak też jest jak coś",
-        ]},
-    ]
 }
-export {dataProjects, dataAbout};
+const dataExperience = [
+  {
+      id:1,
+      img: 'https://i.imgur.com/5sZzQYG.png',
+      title: 'krzychu jest super',
+      date: '2021 - Present',
+      whatHaveIDoneHere: [
+          "krzychu jest super lejczak też jest jak coś lejczak też jest jak coś",
+          "krzychu jest gupi",
+          "krzychu jest ***** ***",
+          "lejczak też jest jak coś",
+    ]
+  },
+  {
+      id:2,
+      img: 'https://i.imgur.com/5sZzQYG.png',
+      title: 'lejczak jest super',
+      date: '2024 - 1232',
+      whatHaveIDoneHere: [
+          "krzychu jest super",
+          "krzychu jest gupi",
+          "krzychu jest ***** ***",
+          "lejczak też jest jak coś",
+    ]
+  },
+  {
+      id:3,
+      img: 'https://i.imgur.com/5sZzQYG.png',
+      title: 'grunwald24',
+      date: '1410 - 1411',
+      whatHaveIDoneHere: [
+          "malowanie krzyzakow",
+          "nananananana annanaa",
+          "krzychu jest ***** ***",
+          "jaskier wali gruche pod poduche",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+    ]
+  },
+  {
+      id:4,
+      img: 'https://i.imgur.com/5sZzQYG.png',
+      title: 'mlodzierz wszechpolska',
+      date: '2000 - Present',
+      whatHaveIDoneHere: [
+          "masakrowanie lewakow",
+          "chodzenie na plenery pisu",
+          "kościół jest super",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+          "lejczak też jest jak coś",
+    ]
+  },
+]
+export { dataProjects, dataAbout, dataExperience };

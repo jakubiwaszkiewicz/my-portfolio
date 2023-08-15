@@ -31,11 +31,11 @@ function ExpCard({ img, whatHaveIDoneHere, title, date }) {
                 <span className='text-md text-left pb-2 w-[250px] sm:w-[500px] text-slate-400'>
                     Date: {date}
                 </span>
-                {whatHaveIDoneHere.map((x, i) => {
-                    return(
-                        <span key={i} className='text-slate-200 text-md sm:w-[500px] w-[250px] text-justify'>•{" "}{x}</span>
-                    )
-                })}
+
+                <pre className='text-slate-200 text-md sm:w-[500px] w-[250px] text-justify'>
+                    {whatHaveIDoneHere}
+                </pre>
+
             </div>
         </div>
     );

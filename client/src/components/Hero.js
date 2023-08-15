@@ -1,9 +1,11 @@
 import React from 'react';
 import Photo from '../assets/pics_for_kuba.png';
 import BackgroundCircles from './BackgroundCircles';
+import { useRef } from 'react';
 
 function Hero({ photo, name }) {
-  console.log(name)
+
+    const windowWidth = useRef(window.innerWidth);
     return (
       <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
@@ -20,14 +22,9 @@ function Hero({ photo, name }) {
           '>
             {name}
           </h2>
-          <h2 className='
-            text-sm
-            uppercase
-            pb-2
-            tracking-[15px]
-          '>
-            Architect | Make-up Artist | Designer
-          </h2>
+          {windowWidth.current > 768 ? <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Architect | Make-up Artist | Designer</h2> : <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Architect<br/>Make-up Artist<br/>Designer</h2> }
+          
+          
           {/* <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
             <span className='text-white z-10'>{text}</span>
             <Cursor cursorColor="white"/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './pages/Home';
@@ -12,9 +13,13 @@ import Footer from './components/Footer';
 import Portfolio from './pages/Portfolio';
 import bgImage from './assets/bg.png';
 import Project from './pages/Project';
+import FooterAlt from './components/FooterAlt';
 
 // data for tests 
-import {dataAbout, dataProjects} from './data.js';
+import { dataAbout, dataProjects, dataExperience } from './data.js';
+import { useLocation } from 'react-router-dom';
+
+
 
 const classNameString =`
     text-white
@@ -38,12 +43,14 @@ const classNameString =`
   };
 
 const Layout = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   return (
     <div className={classNameString} style={appStyles}>
       <Header/>
       <Outlet/>
-      <Footer/>
-    </div>
+      {isHome ? <FooterAlt/> : <Footer/> }
+    </div> 
   )
 }
 
@@ -59,6 +66,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home
             data = {dataAbout}
+            dataExperience = {dataExperience}
           />,
       },
       {

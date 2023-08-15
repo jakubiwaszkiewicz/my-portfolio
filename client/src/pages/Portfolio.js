@@ -8,39 +8,39 @@ export default function Portfolio({ data }) {
 
   const categoryParam = useParams().id;
 
-  
-
     return (
           <div>
-              <div className='w-100 min-h-screen flex flex-wrap items-center
+              <div className='w-100 min-h-screen flex flex-wrap flex-col items-center
               justify-center max-w-7xl mx-auto'>
-                <h1 className='nonAbsoluteTitle'>
+                <h1 className='nonAbsoluteTitle text-center'>
                   {
                     categoryParam === "1"
                     ? "Archtectural Projects"
                     : categoryParam === "2"
                     ? "Graphic Projects"
-                    : "Characetrization Projects" 
+                    : "Characetrization Projects"
                   }
                 </h1>
-
-                {data.map((item) => {
-                  if (item.categoryId !== categoryParam) return null;
-                  return (
-                    <div className='w-[400px] h-[400px] m-5 p-7 bg-black bg-opacity-50 rounded-md flex flex-col items-center justify-center cursor-pointer' key={item.id} >
+                <h1 className='nonAbsoluteTitle text-center text-lg'>
+                  (click on project for more info)
+                </h1>
+                <div className='flex flex-wrap items-center justify-center'>
+                  {data.map((item) => {
+                    if (item.categoryId !== categoryParam) return null;
+                    return (
                       <Link to={`/project/${item.id}`}>
-                        <img
-                          className='w-[400px] h-[300px] object-cover rounded-lg'
-                          src={item.img}
-                          alt=""
-                        />
-                        <h1 className='text-center tracking-[6px] pt-3 underline-offset-8 underline'>{item.title}</h1>
-                        {/* below line for tests */}
-                        <p className='text-xs mt-5'>{item.description}</p>
+                        <div className='w-[350px] min-h-[350px] m-5 p-7 bg-black bg-opacity-50 opacity-90 transition hover:opacity-100 rounded-md flex flex-col justify-center items-center cursor-pointer' key={item.id} >
+                            <img
+                              className='object-cover rounded-lg'
+                              src={item.img}
+                              alt=""
+                            />
+                            <h1 className='decoration-1 font-light lg:text-2xl text-xl underline underline-offset-2 tracking-[6px]'>{item.title}</h1>  
+                        </div>
                       </Link>
-                    </div>
-                  )
-                })}
+                    )
+                  })}
+                </div>
               </div>
           </div>
     )
