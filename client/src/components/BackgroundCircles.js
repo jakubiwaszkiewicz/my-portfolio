@@ -16,9 +16,9 @@ function BackgroundCircles() {
             transition={{
                 duration: 5,
             }}>
-            <div className='absolute border-8 border-[#D71E75] rounded-full h-[150px] w-[160px] mt-52 blur'/>
-            <div className='absolute border border-[#D71E75] rounded-full h-[140px] w-[160px] mt-52 animate-ping blur'/>
-            <div className='absolute border border-[#D71E75] rounded-full h-[650px] w-[650px] mt-52 animate-pulse blur'/>
+            <div className='absolute border-8 border-[#ffffff] rounded-full h-[150px] w-[160px] mt-52 blur'/>
+            <div className='absolute border border-[#ffffff] rounded-full h-[140px] w-[160px] mt-52 animate-ping blur'/>
+            <div className='absolute border border-[#ffffff] rounded-full h-[650px] w-[650px] mt-52 animate-pulse blur'/>
         </motion.div>
     );
 }

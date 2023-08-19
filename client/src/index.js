@@ -62,7 +62,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home
+            aboutData = {dataAbout}
+            expData = {dataExperience}
+        />,
       },
       {
         path: "/projects/:id",

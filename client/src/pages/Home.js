@@ -20,44 +20,43 @@ const ContactMe =  lazy(() => import('../components/ContactMe'));
 
 */
 
-const API_ABOUT_URL = 'http://localhost:3001/api/about-data';
-const API_EXP_URL = 'http://localhost:3001/api/experiences-data';
+// const API_ABOUT_URL = 'http://localhost:3001/api/about-data';
+// const API_EXP_URL = 'http://localhost:3001/api/experiences-data';
 
-function Home() {
+function Home({ aboutData, expData }) {
 
-  let [ loadingAPI , setLoadingAPI ] = useState([true, true])
-  let [ aboutData, setAboutData ] = useState('')
-  let [ expData, setExpData ] = useState([])
+  let [ loadingAPI , setLoadingAPI ] = useState([false, false])
+  // let [ aboutData, setAboutData ] = useState('')
+  // let [ expData, setExpData ] = useState([])
 
 
-  useEffect(() => {
-    fetch(API_ABOUT_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setAboutData(data.data.attributes)
-        setLoadingAPI((prevLoading) => [false, prevLoading[1]])
-      })}, []);
+  // useEffect(() => {
+  //   fetch(API_ABOUT_URL)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setAboutData(data.data.attributes)
+  //       setLoadingAPI((prevLoading) => [false, prevLoading[1]])
+  //     })
+  //     .catch(err => {console.log(err)})
+  //   }, []);
 
-  useEffect(() => {
-    fetch(API_EXP_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        setExpData(data.data)
-        setLoadingAPI((prevLoading) => [prevLoading[1], false])
-      })
-  
-  }, []);
+  // useEffect(() => {
+  //   fetch(API_EXP_URL)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setExpData(data.data)
+  //       setLoadingAPI((prevLoading) => [prevLoading[1], false])
+  //     })
+  //     .catch(err => {console.log(err)})
+  // }, []);
 
-  useEffect(() => {
-    console.log(loadingAPI)
-  }, [loadingAPI])
+  console.log(expData)
 
   return (
     <div>
-      {
-        loadingAPI.some((element) => element === true ) && <Loading />
-      }
-
+        {
+          loadingAPI.some((element) => element === true ) && <Loading />
+        }
         <section id="hero" className="snap-start">
           <Hero
             photo={aboutData.photo1}
@@ -76,7 +75,7 @@ function Home() {
         {/* {Experience} */}
         <section id="experience" className="snap-center">
           <WorkExperience
-            experiences={expData}
+            expData={expData}
           />
         </section>
 

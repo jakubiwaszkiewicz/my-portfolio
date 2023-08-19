@@ -57,13 +57,13 @@ const dataProjects = [{
   }];
 
 const dataAbout = {
-    name: 'Magdalena Całus',
+    name: 'Jakub Iwaszkiewicz',
     phone: '123456789',
-    email: 'calus.magda2@gmail.com',
+    email: 'kkuba.iwaszkiewicz@gmail.com',
     description: 'Im a 3rd year Computer Science studesnt at the University of Waterloo. Im passionate about building things that make a difference in peoples lives. Im currently looking for a Winter 2022 internship opportunity.',
-    photo1: 'https://i.imgur.com/JQZIa5X.png',
-    photo2: 'https://i.imgur.com/qEuxALD.png',
-    localization: 'Gdańsk, Poland',
+    photo1: 'https://i.imgur.com/IS9U88n.jpg',
+    photo2: 'https://i.imgur.com/IS9U88n.jpg',
+    localization: 'Wrocław, Poland',
 }
 const dataExperience = [
   {

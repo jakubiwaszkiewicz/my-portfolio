@@ -1,8 +1,20 @@
 import React from 'react';
 import BackgroundCircles from './BackgroundCircles';
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { useRef } from 'react';
 
 function Hero({ photo, name }) {
+
+  const [text, count] = useTypewriter({
+    words:[
+        `Hi, My Name's Jakub!`,
+        "ICT-student.tsx",
+        "CantWorkWithout: \"Coffee\"",
+        "<fall_in_love_with_web-dev />",
+        ],
+    loop: true,
+    delaySpeed: 2000,
+});
 
     const windowWidth = useRef(window.innerWidth);
     return (
@@ -17,13 +29,17 @@ function Hero({ photo, name }) {
         <h2 className='
             text-4xl
             font-light
-            pb-10
+            pb-5
           '>
             {name}
           </h2>
-          {windowWidth.current > 768 ? <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Architect | Make-up Artist | Designer</h2> : <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Architect<br/>Make-up Artist<br/>Designer</h2> }
+          {windowWidth.current > 768 ? <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Web Developer</h2> : <h2 className=' text-sm uppercase pb-2 tracking-[15px]'>Web Developer</h2> }
           
-          
+          <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
+            <span className='text-white z-10'>{text}</span>
+            <Cursor cursorColor="#ffffff"/>
+          </h1>
+
           {/* <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
             <span className='text-white z-10'>{text}</span>
             <Cursor cursorColor="white"/>
