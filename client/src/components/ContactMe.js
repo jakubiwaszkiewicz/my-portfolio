@@ -30,21 +30,21 @@ function ContactMe({pageInfo}) {
 
           <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
             <PhoneIcon
-              className='animate-pulse h-7 w-7 text-[#AA1E60]'
+              className='animate-pulse h-7 w-7 text-[#ffffff]'
             />
             <p className="text-xl md:text-2xl">1233453456</p>
           </div>
 
           <div className='flex items-center lg:space-x-5 space-x-3 justify-center'>
             <EmailIcon
-              className='animate-pulse h-7 w-7 text-[#AA1E60]'
+              className='animate-pulse h-7 w-7 text-[#ffffff]'
             />
             <p className="text-xl md:text-2xl">calus.magda2@gmail.com</p>
           </div>
 
           <div className='flex items-center lg:space-x-5 space-x-3 text-md justify-center'>
             <FmdGoodIcon
-              className='animate-pulse h-7 w-7 text-[#AA1E60]'
+              className='animate-pulse h-7 w-7 text-[#ffffff]'
             />
             <p className="text-xl md:text-2xl">pociąg</p>
           </div>

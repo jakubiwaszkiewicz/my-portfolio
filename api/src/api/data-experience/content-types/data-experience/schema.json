@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_experiences",
+  "info": {
+    "singularName": "data-experience",
+    "pluralName": "data-experiences",
+    "displayName": "dataExperience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "imgNew": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

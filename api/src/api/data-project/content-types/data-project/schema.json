@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "data_projects",
+  "info": {
+    "singularName": "data-project",
+    "pluralName": "data-projects",
+    "displayName": "dataProject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "imgsNew": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "technologies": {
+      "type": "text"
+    },
+    "role": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "text"
+    },
+    "techniquesDemonstrated": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

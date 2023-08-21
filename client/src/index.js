@@ -30,7 +30,7 @@ const classNameString =`
     snap-mandatory
     z-0 scrollbar
     scrollbar-track-gray-400/20
-    scrollbar-thumb-[#D71E75]/80
+    scrollbar-thumb-[#ffffff]/80
     scroll-smooth
   `;
 
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         />,
       },
       {
-        path: "/projects/:id",
+        path: "/projects",
         element: <Portfolio
             data = {dataProjects}
         />,

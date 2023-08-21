@@ -1,13 +1,9 @@
 import React from 'react';
-import CharacterizationsImg from '../assets/characterizations.png';
 import Category from './Category';
 import { Link } from 'react-router-dom';
-import GraphicsImg from '../assets/madzia-seba.jpg';
+import bg from '../assets/bg.png';
 
 function Projects() {
-    
-    
-
     return (
         <div className='
             h-screen
@@ -40,25 +36,12 @@ function Projects() {
                 basis-full
                 mt-20
             '> 
-                <Link to='/projects/archtectural'>
+                <Link to='/projects'>
                     <Category
-                        categoryName='architecture'
-                        categoryImg={CharacterizationsImg}
+                        categoryName='Click here to see my projects!'
+                        categoryImg={bg}
                     />
                 </Link>
-                <Link to='/projects/graphic'>
-                    <Category
-                        categoryName='graphics'
-                        categoryImg={GraphicsImg}
-                    />
-                </Link>
-                <Link to='/projects/characterization'>
-                        <Category
-                            categoryName='characterizations'
-                            categoryImg={CharacterizationsImg}
-                        />
-                </Link>
-
             </div>
         </div>
     );
