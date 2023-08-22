@@ -1,0 +1,1 @@
+to fetch data about img query= 'http://localhost:3001/api/data-about?populate=*'

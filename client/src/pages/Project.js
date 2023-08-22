@@ -18,7 +18,7 @@ export default function Project({ data }) {
           data.map((item) => {
             if (item.id !== Number(id)) return null;
              return (
-              <div className="flex gap-2 flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-normal">
+              <div className="flex gap-2 flex-col lg:flex-row justify-center items-center lg:items-start lg:justify-normal" key={item.id}>
                 <div className="flex-1 flex flex-row flex-wrap lg:flex-col lg:items-start items-center justify-center lg:justify-normal">
                   {images.map((img, index) => {
                     return (

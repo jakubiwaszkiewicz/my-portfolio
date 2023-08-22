@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './pages/Home';
@@ -17,9 +17,12 @@ import FooterAlt from './components/FooterAlt';
 
 // data for tests 
 import { dataAbout, dataProjects, dataExperience } from './data.js';
-import { useLocation } from 'react-router-dom';
+import { useLocation, defer } from 'react-router-dom';
 
-
+const API_EXP_URL = `${process.env.REACT_APP_API_URL_EXP}?populate=*`;
+const API_ABOUT_URL = `${process.env.REACT_APP_API_URL_ABOUT}?populate=*`;
+const API_ABOUT_PROJECTS = `${process.env.REACT_APP_API_URL_PROJECTS}?populate=*`;
+const API_URL = process.env.REACT_APP_API_URL;
 
 const classNameString =`
     text-white
@@ -43,6 +46,7 @@ const classNameString =`
   };
 
 const Layout = () => {
+
   const location = useLocation();
   const isHome = location.pathname === '/';
   
@@ -66,20 +70,46 @@ const router = createBrowserRouter([
             aboutData = {dataAbout}
             expData = {dataExperience}
         />,
+        loader: async ({ request, params }) => {
+          let aboutDataAPI = await fetch(API_ABOUT_URL)
+          let expDataAPI = await fetch(API_EXP_URL)
+          if (!aboutDataAPI.ok) throw new Error(await aboutDataAPI.text())
+          if (!expDataAPI.ok) throw new Error(await expDataAPI.text())
+          aboutDataAPI = await aboutDataAPI.json()
+          expDataAPI = await expDataAPI.json()
+          return defer({
+            results: {aboutDataAPI, expDataAPI}
+          })
+        }
       },
       {
         path: "/projects",
         element: <Portfolio
             data = {dataProjects}
         />,
+        loader: async ({ request, params }) => {
+          let dataProjectsAPI = await fetch(API_ABOUT_PROJECTS)
+          if (!dataProjectsAPI.ok) throw new Error(await dataProjectsAPI.text())
+          dataProjectsAPI = await dataProjectsAPI.json()
+          return defer({
+            results: {dataProjectsAPI}
+          })
+        }
       },
       {
         path: "/project/:id",
         element: <Project
             data = {dataProjects}
         />,
+        loader: async ({ request, params }) => {
+          let dataProjectsAPI = await fetch(API_ABOUT_PROJECTS)
+          if (!dataProjectsAPI.ok) throw new Error(await dataProjectsAPI.text())
+          dataProjectsAPI = await dataProjectsAPI.json()
+          return defer({
+            results: {dataProjectsAPI}
+          })
+        }
       },
-      
     ]
   },
 ]);

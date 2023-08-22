@@ -1,9 +1,14 @@
 import React from 'react';
 import ExpCard from './ExpCard';
 
-function WorkExperience({ expData }) {
+function WorkExperience({ expData, expDataAPI }) {
 
-    console.log(expData)
+    // console.log(expDataAPI.data)
+    // above array of data exp
+
+    const API_URL = process.env.REACT_APP_API_URL;
+
+    console.log(expDataAPI.data[0])
 
     return (
         <div>
@@ -31,19 +36,19 @@ function WorkExperience({ expData }) {
                     flex
                     overflow-x-scroll
                     overflow-y-hidden
-                    snap-x
+                    snap-x  
                     snap-mandatory
                     z-20 scrollbar
                     scrollbar-track-gray-400/20
                     scrollbar-thumb-[#ffffff]'
                 >
-                    {expData.map((x) => (
+                    {expDataAPI.data.map((item) => (
                         <ExpCard
-                            key={x.id}
-                            img={x.img}
-                            title={x.title}
-                            date={x.date}
-                            whatHaveIDoneHere={x.whatHaveIDoneHere}
+                            key={item.id}
+                            img={`${API_URL}${item.attributes.imgNew.data.attributes.formats.large.url}`}
+                            title={item.attributes.title}
+                            date={item.attributes.date}
+                            whatHaveIDoneHere={item.attributes.description}
                         />))}
                 </div>
             </div>

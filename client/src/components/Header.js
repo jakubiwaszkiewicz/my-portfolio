@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SocialIcon } from 'react-social-icons';  
 import { Link } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
