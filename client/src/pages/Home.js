@@ -4,78 +4,50 @@ import About from '../components/About';
 import WorkExperience from '../components/WorkExperience';
 import Projects from '../components/Projects';
 import ContactMe from '../components/ContactMe';
-import { AiOutlineArrowUp } from 'react-icons/ai'
+import { AiOutlineArrowUp } from 'react-icons/ai';
 import Loading from '../components/Loading';
 
-
+import { useLocation, useLoaderData } from 'react-router-dom';
 /*
 const Hero =  lazy(() => import('../components/Hero'));
 const About =  lazy(() => import('../components/About'));
 const WorkExperience =  lazy(() => import('../components/WorkExperience'));
 const Projects =  lazy(() => import('../components/Projects'));
 const ContactMe =  lazy(() => import('../components/ContactMe'));
-
-
-
-
 */
 
-// const API_ABOUT_URL = 'http://localhost:3001/api/about-data';
-// const API_EXP_URL = 'http://localhost:3001/api/experiences-data';
-
-function Home({ aboutData, expData }) {
-
-  let [ loadingAPI , setLoadingAPI ] = useState([false, false])
-  // let [ aboutData, setAboutData ] = useState('')
-  // let [ expData, setExpData ] = useState([])
+const API_URL = process.env.REACT_APP_API_URL;
 
 
-  // useEffect(() => {
-  //   fetch(API_ABOUT_URL)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setAboutData(data.data.attributes)
-  //       setLoadingAPI((prevLoading) => [false, prevLoading[1]])
-  //     })
-  //     .catch(err => {console.log(err)})
-  //   }, []);
+function Home() {
 
-  // useEffect(() => {
-  //   fetch(API_EXP_URL)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setExpData(data.data)
-  //       setLoadingAPI((prevLoading) => [prevLoading[1], false])
-  //     })
-  //     .catch(err => {console.log(err)})
-  // }, []);
+  const {aboutDataAPI, expDataAPI} = useLoaderData().results;
 
-  console.log(expData)
 
   return (
     <div>
-        {
+        {/*
           loadingAPI.some((element) => element === true ) && <Loading />
-        }
+        */}
         <section id="hero" className="snap-start">
           <Hero
-            photo={aboutData.photo1}
-            name={aboutData.name}
+            photo={aboutDataAPI.data ? `${API_URL}${aboutDataAPI.data.attributes.newPhoto1.data.attributes.formats.large.url}` : ''}
+            name={aboutDataAPI.data ? aboutDataAPI.data.attributes.name : ''}
           />
         </section>
 
         {/* {About} */}
         <section id="about" className="snap-center">
           <About
-            photo={aboutData.photo2}
-            desc={aboutData.description}
+            photo={aboutDataAPI.data ? `${API_URL}${aboutDataAPI.data.attributes.newPhoto2.data.attributes.formats.large.url}` : ''}
+            desc={aboutDataAPI.data.attributes.description}
           />
         </section>
 
         {/* {Experience} */}
         <section id="experience" className="snap-center">
           <WorkExperience
-            expData={expData}
+            expDataAPI={expDataAPI}
           />
         </section>
 
